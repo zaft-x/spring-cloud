@@ -1,0 +1,17 @@
+server:
+  port: 18080
+spring:
+  application:
+    name: test-server
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  registered:
+    port-0: 16387
+    port-1: 16386
+    port-2: 16385
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.registered.port-0}/eureka,http://${eureka.instance.hostname}:${eureka.registered.port-1}/eureka,http://${eureka.instance.hostname}:${eureka.registered.port-2}/eureka

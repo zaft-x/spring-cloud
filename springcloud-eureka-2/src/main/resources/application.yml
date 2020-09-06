@@ -1,0 +1,13 @@
+server:
+  port: 16385
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    register-with-eureka: true #本服务是注册中心，不需要再注册到注册中心
+    fetch-registry: true  #本服务是注册中心，不需要去检索服务信息
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:16387/eureka,http://${eureka.instance.hostname}:16386/eureka
+spring:
+  application:
+    name: eureka-server

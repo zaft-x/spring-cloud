@@ -1,0 +1,8 @@
+package org.study;
+
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest {
+}
